@@ -2,8 +2,9 @@ package com.company.dsa.linkedin;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.UnaryOperator;
 
-public class UnaryOperator {
+public class UnaryOperatorExample {
 
     public static void main(String[] args) {
 
@@ -17,9 +18,11 @@ public class UnaryOperator {
         dates.add("17/03/2022");
         System.out.println(dates);
 
-        java.util.function.UnaryOperator<String> replaceSlashes = date -> date.replace("/","-");
+        UnaryOperator<String> replaceSlashes = date -> date.replace("/","-");
 
-        System.out.println(replaceSlashes.apply(dates.get(1)));
+        dates.replaceAll(replaceSlashes);
+
+        System.out.println(dates.get(0).replace("/","+"));
 
 
     }
