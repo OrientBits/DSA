@@ -1,7 +1,10 @@
 package com.company.dsa.collection.set;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashSet;
-import java.util.Iterator;
+import java.util.TreeSet;
+import java.util.stream.Stream;
 
 // order is not preserved
 // not indexed
@@ -20,25 +23,19 @@ public class HashSetExample {
         hashSet.add("Chhotan");
         hashSet.add("Abhishek");
 
-        //first way
-        hashSet.forEach(s -> System.out.println("Name: " + s));
+        hashSet.forEach(System.out::println);
 
         System.out.println();
 
-        //second way foreach
-        for (String name : hashSet) {
-            System.out.println("Name: " + name);
-        }
+        // first way in ascending order
+        Stream<String> sorted = hashSet.stream().sorted();
+        sorted.forEach(System.out::println);
+
+        System.out.println("\n reverse order using stream api");
+        //second way
+        hashSet.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
 
         System.out.println();
-
-        // forth way
-        for (Iterator<String> elements = hashSet.iterator(); elements.hasNext();){
-            System.out.println("Name: "+elements.next());
-        }
-
-        // fifth way index is not preserved in set
-
 
 
     }
