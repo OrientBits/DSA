@@ -2,7 +2,7 @@ package com.company.dsa.oops;
 
 
 class A{
-    public int print(int a){
+    protected int print(int a){
         System.out.println("printing from A");
         return a*a;
     }
@@ -14,6 +14,7 @@ class B extends A{
         System.out.println("printing from B");
         return 5;
     }
+
 
 }
 

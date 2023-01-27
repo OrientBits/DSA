@@ -1,9 +1,7 @@
 package com.company.dsa.collection.set;
 
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashSet;
-import java.util.TreeSet;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 // order is not preserved
@@ -28,11 +26,14 @@ public class HashSetExample {
         System.out.println();
 
         // first way in ascending order
-        Stream<String> sorted = hashSet.stream().sorted();
-        sorted.forEach(System.out::println);
+        Set<String> stringSet = new TreeSet<>(hashSet);
+
+        for (String s : stringSet) {
+            System.out.println("SET: " + s);
+        }
 
         System.out.println("\n reverse order using stream api");
-        //second way
+        //second way to reverse the order
         hashSet.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
 
         System.out.println();

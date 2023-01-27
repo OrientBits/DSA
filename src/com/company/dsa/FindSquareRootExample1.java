@@ -23,7 +23,7 @@ public class FindSquareRootExample1 {
             t = sqrtroot;
             sqrtroot = (t + (num / t)) / 2;
         }
-        while ((t - sqrtroot) != 0);
+        while ( (t - sqrtroot) != 0);
 
         return sqrtroot;
     }
