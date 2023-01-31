@@ -1,18 +1,16 @@
 package com.company.dsa;
 
-import java.util.Date;
-import java.util.UUID;
 
 public class Test {
 
     public static void main(String[] args) {
 
-        String randomId = UUID.randomUUID().toString();
-        String name = "Hello.jpeg";
+        int Integer = 24;
+        char String = 'I';
+        System.out.print(Integer);
+        System.out.print(String);
 
-        System.out.println(randomId.concat(name.substring(name.lastIndexOf("."))));
-
-
+       
     }
 
 
