@@ -19,24 +19,24 @@ public class HashSetExample {
         hashSet.add("Motu");
         hashSet.add("Mithun");
         hashSet.add("Chhotan");
-        hashSet.add("Abhishek");
+        hashSet.add(null);
 
         hashSet.forEach(System.out::println);
 
-        System.out.println();
+//        System.out.println();
+//
+//        // first way in ascending order
+//        Set<String> stringSet = new TreeSet<>(hashSet);
+//
+//        for (String s : stringSet) {
+//            System.out.println("SET: " + s);
+//        }
 
-        // first way in ascending order
-        Set<String> stringSet = new TreeSet<>(hashSet);
-
-        for (String s : stringSet) {
-            System.out.println("SET: " + s);
-        }
-
-        System.out.println("\n reverse order using stream api");
-        //second way to reverse the order
-        hashSet.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
-
-        System.out.println();
+//        System.out.println("\n reverse order using stream api");
+//        //second way to reverse the order
+//        hashSet.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+//
+//        System.out.println();
 
 
     }

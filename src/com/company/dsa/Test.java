@@ -4,13 +4,16 @@ package com.company.dsa;
 public class Test {
 
     public static void main(String[] args) {
+        something(5,returnSome(6));
+    }
 
-        int Integer = 24;
-        char String = 'I';
-        System.out.print(Integer);
-        System.out.print(String);
+    public static void something(int a, int b){
+        System.out.println(a+b);
+    }
 
-       
+
+    public static int returnSome(int a){
+        return a;
     }
 
 

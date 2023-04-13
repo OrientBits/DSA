@@ -20,6 +20,7 @@ public class LinkedHashSetExample {
         linkedHashSet.add("Motu");
         linkedHashSet.add("Chhotan");
         linkedHashSet.add("Abhishek");
+        linkedHashSet.add(null);
 
 
         //second way foreach
